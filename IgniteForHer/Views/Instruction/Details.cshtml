@@ -1,0 +1,30 @@
+﻿@model IgniteForHer.Models.Instruction
+
+<div>
+    <p>ID: @Model.InstructionId</p>
+    <p>Title: @Model.Title</p>
+    <p>Instructions: @Model.InstructionItem</p>
+    <p>Hint: </p> @Html.Raw(Model.Hint)
+    @{
+        var next = Model.InstructionId + 1;
+        var previous = Model.InstructionId - 1;
+
+        if (previous < 1)
+        {
+            previous = 1;
+        }
+
+        if (next > 2)
+        {
+            next = 2;
+        }
+
+
+        <p> 
+            <a href="http://localhost:18953/Instruction/Details/@previous" class="btn btn-primary btn-lg">Previous</a>
+            <a href="http://localhost:18953/Instruction/Details/@next" class="btn btn-primary btn-lg">Next</a>
+        </p>
+    }
+
+
+</div>
