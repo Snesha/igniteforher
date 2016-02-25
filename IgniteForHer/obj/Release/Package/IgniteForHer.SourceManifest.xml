@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="c:\users\anseo\documents\visual studio 2015\Projects\IgniteForHer\IgniteForHer\obj\Release\Package\PackageTmp" />
-  <setAcl path="c:\users\anseo\documents\visual studio 2015\Projects\IgniteForHer\IgniteForHer\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="c:\users\anseo\documents\visual studio 2015\Projects\IgniteForHer\IgniteForHer\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>
