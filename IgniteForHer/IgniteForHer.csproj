@@ -184,10 +184,24 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\alldancers.gif" />
+    <Content Include="Content\balloons.jpg" />
+    <Content Include="Content\balloonsGolden.png" />
+    <Content Include="Content\cake.png" />
     <Content Include="Content\concert.jpg" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\dancer.gif" />
+    <Content Include="Content\dancer1.gif" />
+    <Content Include="Content\DJgirl.png" />
+    <Content Include="Content\EntranceRope.png" />
     <Content Include="Content\fire-icon-614x460.png" />
     <Content Include="Content\fire.png" />
+    <Content Include="Content\graduategirl.png" />
+    <Content Include="Content\gymfloor.png" />
+    <Content Include="Content\lady.gif" />
+    <Content Include="Content\MyRoom.png" />
+    <Content Include="Content\MyRoom_Empty.png" />
+    <Content Include="Content\singer.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -243,6 +257,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Instruction\Details.cshtml" />
     <Content Include="Views\Instruction\Instruction1.cshtml" />
+    <Content Include="Views\Instruction\Instruction2.cshtml" />
+    <Content Include="Views\Instruction\Details2.cshtml" />
+    <Content Include="Views\Instruction\Result1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

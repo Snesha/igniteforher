@@ -1,0 +1,213 @@
+﻿<style>
+    .layout {
+        /*background: url("C:/D/Ignite For Her/MyRoom_Final.png") no-repeat;*/
+        background: url("C:/D/Ignite For Her/gymfloor.png") no-repeat;
+        /*background: url("http://previewcf.turbosquid.com/Preview/2014/08/01__14_02_41/Gymfloor3.jpg4f6b1c13-e003-432f-94d2-93bc69eaa6b1Larger.jpg") no-repeat;*/
+        background-size: 600px 350px;
+    }
+
+    .layoutEmpty {
+        background: url("C:/D/Ignite For Her/MyRoom_Empty.png") no-repeat;
+        background-size: 600px;
+    }
+
+    textarea {
+        font-size: 20px;
+        font-weight: 100;
+        /*margin-top: -40px;*/
+        font-style: oblique;
+        border: none;
+        background-color: transparent;
+    }
+
+    .displayBlock {
+        display: inline-block;
+    }
+
+    .mgLeft75 {
+        margin-left: 75px;
+    }
+
+    .mgLeft100 {
+        margin-left: 100px;
+    }
+
+    .mgLeft150 {
+        margin-left: 150px;
+    }
+
+    .mgLeft200 {
+        margin-left: 200px;
+    }
+
+    .mgLeft230 {
+        margin-left: 230px;
+    }
+
+    .mgLeft450 {
+        margin-left: 450px;
+    }
+
+    .mgTop280 {
+        margin-top: 280px;
+    }
+
+    .mgTop20 {
+        margin-top: 20px;
+    }
+
+    .mgTop70 {
+        margin-top: 70px;
+    }
+
+    .mgTop80 {
+        margin-top: 80px;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+        padding-top: -1em;
+        vertical-align: top;
+    }
+
+    label {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .imgShort {
+        width: 70px;
+        height: 70px;
+    }
+
+    .sizeDancers {
+        width: 250px;
+        height: 100px;
+    }
+
+    #decorTop {
+        margin-top: -20px;
+    }
+</style>
+<section id="MyRoom" class="layout" style="margin-top:10px">
+    <div id="decorTop">
+        <div class="displayBlock">
+            <img id="decor1" />
+        </div>
+        <div class="displayBlock mgLeft75">
+            <!--<img id="decorMiddle" />-->
+            <p id="banner" />
+        </div>
+
+        <div class="displayBlock mgLeft75">
+            <img id="decor2" />
+        </div>
+    </div>
+
+    <div id="decorCenter">
+        <div>
+            <div class="displayBlock">
+                <img id="cake" />
+            </div>
+            <div class="displayBlock">
+                <img id="people1" class="mgLeft100 sizeDancers" />
+            </div>
+
+        </div>
+        <div class="mgLeft200 displayBlock">
+            <div class="displayBlock"><img id="people2" style="width:50px" /></div>
+            <!--<div class="displayBlock"><img id="cake" /></div>-->
+            <div class="displayBlock mgLeft100"><img id="people3" /></div>
+        </div>
+
+    </div>
+
+    <div id="decorBottom" style="margin-top:-10px">
+        <div class="displayBlock">
+            <img id="decor3" />
+        </div>
+
+        <div id="discArea" class="displayBlock">
+            <div class="mgLeft200">
+                <img id="dj" class="" />
+            </div>
+            <div class="mgLeft100">
+                <audio controls>
+                    <source id="music" />
+                </audio>
+            </div>
+        </div>
+        <div id="decorBottomRight" class="displayBlock mgLeft75">
+            <img id="decor4" />
+        </div>
+
+
+    </div>
+</section>
+
+<script>
+
+        var decorations = "C:/D/Ignite For Her/balloonsGolden.png";
+        //var decorations = "http://www.tikiballoons.com/images/animatedballoons.gif";
+        //var decorations = "C:/D/Ignite For Her/balloons.jpg";
+        //var cake = "http://www.frostysclub.com/wp-content/gallery/graduation-cakes/graduation-hats-designer-prints.jpg";
+        var cake = "C:/D/Ignite For Her/cake.png";
+        var year = 2016;
+        var banner = "G R A D U A T I O N";
+
+        var dj = "C:/D/Ignite For Her/DJgirl.png";
+        //var dj = "http://www.picgifs.com/job-graphics/job-graphics/dj/dj17.gif";
+        var music = "https://archive.org/download/13.Clean/01.%20Welcome%20to%20New%20York.mp3";
+
+        var Dancers = {
+            top: "C:/D/Ignite For Her/alldancers.gif",
+            middle: "C:/D/Ignite For Her/graduategirl.png",
+            bottom: "C:/D/Ignite For Her/dancer.gif"
+        };
+
+        //Start arranging
+        document.getElementById("decor1").src = decorations;
+        document.getElementById("decor2").src = decorations;
+
+        //document.getElementById("decor1").width = 220;
+        //document.getElementById("decor1").height = 220;
+
+        function ArrangeItems(area, item) {
+            document.getElementById(area).src = item;
+        }
+
+        var djBall = "http://www.dvision.be/Images/gadget/disco_ball_lg_nwm.gif";
+        ArrangeItems("decor3", decorations);
+        ArrangeItems("decor4", decorations);
+        //ArrangeItems("decorMiddle", djBall);
+
+        ArrangeItems("cake", cake);
+        ArrangeItems("people1", Dancers.top);
+        ArrangeItems("people2", Dancers.middle);
+        ArrangeItems("people3", Dancers.bottom);
+
+        function SetUpBanner() {
+            document.getElementById("banner").innerText = year + "   |||   " + banner + "   |||   ";
+        }
+
+        SetUpBanner();
+
+        ArrangeItems("dj", dj);
+        ArrangeItems("music", music);
+
+        var myCake = document.getElementById("cake");
+        myCake.addEventListener('click', function () {
+
+            alert("~ Congratulations on Graduation ~");
+
+        }, false);
+
+
+
+</script>

@@ -1,0 +1,15 @@
+﻿@model IgniteForHer.Models.Instruction
+
+@{
+    var data = @"function fs (){
+var x = 'y';
+}";
+}
+
+    <div style="padding:20px 0px">
+        <p>ID: @Model.InstructionId</p>
+        <p>Title: @Model.Title</p>
+        <p>Instructions: @Model.InstructionItem</p>
+        <p>Hint: @Model.Hint</p>
+        <pre>@data</pre>
+    </div>
