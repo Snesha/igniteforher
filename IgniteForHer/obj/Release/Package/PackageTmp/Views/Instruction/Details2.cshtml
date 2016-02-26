@@ -25,14 +25,15 @@
     </div>
     <div class="col-md-4" style="height:600px; margin:auto; border:none">
         <h1>Result</h1>
-        <img src="~/Content/MyRoom_Final.png" style="border:1px solid white; width:400px" />
+        <img src="~/Content/concert.jpg" width="400" style="border:1px solid white"/>
+        <input type="button" id="btnpopup" value="Open Modal Popup" onclick="ShowModelPopUp();" />
     </div>
     </div>
 
 
 <script type="text/javascript">
     ShowModelPopUp = function () {
-        window.showModalDialog('/Instruction/Result2', "WindowPopup", "dialogHeight: 650px; dialogWidth: 800px;" +
+        window.showModalDialog('/Instruction/Results1', "WindowPopup", "dialogHeight: 650px; dialogWidth: 800px;" +
                     "dialogTop: 50px;  dialogLeft: 150px; edge: Raised; center: Yes;" +
                     "help: No; resizable: No; status: No;");
 }

@@ -37,7 +37,10 @@ namespace IgniteForHer.Controllers
             return View();
         }
 
-
+        public ActionResult Result2()
+        {
+            return View();
+        }
 
     }
 }

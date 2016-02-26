@@ -198,9 +198,11 @@
     <Content Include="Content\fire.png" />
     <Content Include="Content\graduategirl.png" />
     <Content Include="Content\gymfloor.png" />
+    <Content Include="Content\IFHFinal.png" />
     <Content Include="Content\lady.gif" />
     <Content Include="Content\MyRoom.png" />
     <Content Include="Content\MyRoom_Empty.png" />
+    <Content Include="Content\MyRoom_Final.png" />
     <Content Include="Content\singer.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -260,6 +262,7 @@
     <Content Include="Views\Instruction\Instruction2.cshtml" />
     <Content Include="Views\Instruction\Details2.cshtml" />
     <Content Include="Views\Instruction\Result1.cshtml" />
+    <Content Include="Views\Instruction\Result2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

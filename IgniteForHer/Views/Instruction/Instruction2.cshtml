@@ -1,6 +1,5 @@
 ﻿@model IgniteForHer.Models.Instruction
 
-
 <style type="text/css">
     .important {
         color: red;
@@ -18,46 +17,55 @@
     }
 </style>
 
-<h4># Chapter 2:  Everything is easier with Functions and Using Time! # </h4>
+<h4> Chapter 2:  Everything is easier with Functions</h4>
 <br />
-<p>Now that you have figured out all of the pieces to your party, time to place and size the items. But that will take forever.  How can we do this faster? </p>
-<p>With a function or method. A JavaScript function is a block or group of code designed to perform a group of tasks all at once.</p>
-<p>Let's define a function that will size and place each of your items.</p>
-
-<p>Wouldn't it be nice to start the party on time? How do we go about figuring out time through code?</p>
-<p>There's an easy function to get the date !</p>
-<p>Now I could use a reminder when the clock strikes 8 p.m. to get this party rolling! Can you figure out how to change the code to let you know when to get going?</p>
+<p>Now that you have figured out all of the pieces to your party, time to place the items on the dance floor. We will do this using a function or method, which is a block of code that groups tasks to be performed and can be used or called repeatedly. A function can take arguments, which are variables you pass to the function.</p>
+<ul>
+    <li>We have defined 3 functions for you that you can copy and paste into the code editor:</li>
+    <li style="list-style-type:none">
+        <ul>
+            <li>"ArrangeItems" that will place each of your items. Arguments: the item you want to place and the area you want to place it in.</li>
+            <li>"ArrangeDecorations" that will place your decorations in each corner of the dance floor. Arguments: the decoration.</li>
+            <li>"SetUpBanner" that will place the banner message and year variable that you already defined across the top of your party floor. Arguments:  message and  year.</li>
+        </ul>
+    </li>
+    <li>Call each method using the appropriate variables you defined in the previous chapter to place them onto the dance floor.</li>
+    <li>Click "run code" to get this party started.</li>
+</ul>
+<p>After you finish placing the items in your party, click the next button to move onto the next chapter to start this party!</p>
 
 <p> <span class="sample"> # Sample Code #</span></p>
 
 <div style="overflow: auto;">
 
 <pre style="font-family:monospace;">
-<span style="color: black;">document.getElementById(</span><span style="color: red;">"decor1"</span><span style="color: black;">).src = balloons;</span>
-<span style="color: black;">document.getElementById(</span><span style="color: red;">"decor1"</span><span style="color: black;">).width = 200;</span>
-<span style="color: black;">document.getElementById(</span><span style="color: red;">"decor1"</span><span style="color: black;">).height = 200;</span>
-<br />
-<span style="color: black;">document.getElementById(</span><span style="color: red;">"decor2"</span><span style="color: black;">).src = tree;</span>
-<br />
-
-<span style="color: blue;">function </span><span style="color: black;">ArrangeStuff(area, item) {</span>
+<span style="color: blue;">function </span><span style="color: black;">ArrangeItems(area, item) {</span>
     <span style="color: black;">document.getElementById(area).src = item;</span>
 <span style="color: black;">}</span>
 <br />
-<span style="color: black;">ArrangeStuff(</span><span style="color: red;">"decor3"</span><span style="color: black;">, mickey);</span>
-<span style="color: black;">ArrangeStuff(</span><span style="color: red;">"decor4"</span><span style="color: black;">, lights);</span>
-<br />
-<span style="color: blue;">function </span><span style="color: black;">ShowMessage() {</span>
-    <span style="color: blue;">var </span><span style="color: black;">timeNow = </span><span style="color: blue;">new </span><span style="color: black;">Date();</span>
-    <span style="color: blue;">if </span><span style="color: black;">(timeNow.getTime() == 22) {</span>
-    <span style="color: black;">alert(</span><span style="color: red;">"Time to start the party!"</span><span style="color: black;">);</span>
-    <span style="color: black;">}</span>
+
+<span style="color: blue;">function </span><span style="color: black;">ArrangeDecorations(item) {</span>
+    <span style="color: black;">ArrangeItems(</span><span style="color: red;">"decor1"</span><span style="color: black;">, item);</span>
+    <span style="color: black;">ArrangeItems(</span><span style="color: red;">"decor2"</span><span style="color: black;">, item);</span>
+    <span style="color: black;">ArrangeItems(</span><span style="color: red;">"decor3"</span><span style="color: black;">, item);</span>
+    <span style="color: black;">ArrangeItems(</span><span style="color: red;">"decor4"</span><span style="color: black;">, item);</span>
 <span style="color: black;">}</span>
 <br />
-<span style="color: blue;">function </span><span style="color: black;">PlayMusic() {</span>
-    <span style="color: blue;">var </span><span style="color: black;">keepPlaying  = </span><span style="color: blue;">true </span><span style="color: black;">;</span>
+<span style="color: blue;">function </span><span style="color: black;">SetUpBanner(banner, year) {</span>
+    <span style="color: black;">document.getElementById(</span><span style="color: red;">"year"</span><span style="color: black;">).innerText = year;</span>
+    <span style="color: black;">document.getElementById(</span><span style="color: red;">"banner"</span><span style="color: black;">).innerText = banner;</span>
 <span style="color: black;">}</span>
+<br />
+<span style="color: black;">ArrangeItems(</span><span style="color: red;">"cake"</span><span style="color: black;">, cake);</span>
+<span style="color: black;">ArrangeItems(</span><span style="color: red;">"people1"</span><span style="color: black;">, Dancers.top);</span>
+<span style="color: black;">ArrangeItems(</span><span style="color: red;">"people2"</span><span style="color: black;">, Dancers.middle);</span>
+<span style="color: black;">ArrangeItems(</span><span style="color: red;">"people3"</span><span style="color: black;">, Dancers.bottom);</span>
+<span style="color: black;">ArrangeItems(</span><span style="color: red;">"music"</span><span style="color: black;">, music);</span>
+<span style="color: black;">ArrangeDecorations(decorations); </span>
+<span style="color: black;">SetUpBanner(banner, year);</span>
 <br />
 </pre>
 </div>
+
+
 
