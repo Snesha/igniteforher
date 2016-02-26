@@ -15,5 +15,7 @@ namespace IgniteForHer.Models
         public string Html { get; set; }
         public string Javascript { get; set; }
 
+        public string testConsole { get; set; }
+
     }
 }

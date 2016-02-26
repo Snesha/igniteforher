@@ -3,4 +3,5 @@
   <IisApp path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp" />
   <setAcl path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
   <setAcl path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\anseo\igniteforher\IgniteForHer\obj\Release\Package\PackageTmp\App_Data" setAclResourceType="Directory" setAclAccess="Write" />
 </sitemanifest>

@@ -9,11 +9,10 @@ namespace IgniteForHer.Controllers
 {
     public class InstructionController : Controller
     {
-        public ActionResult Details(int id)
+        public ActionResult Details()
         {
             InstructionContext instructionContext = new InstructionContext();
-            Instruction instruction = instructionContext.Instructions.Single(instr => instr.InstructionId == id);
-
+            Instruction instruction = instructionContext.Instructions.FirstOrDefault();            
             return View(instruction);
         }
     }
