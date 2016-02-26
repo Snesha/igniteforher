@@ -10,18 +10,13 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="" style="width:98%">
+       <div class="" style="width:98%">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("{ Ignite For Her }", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+             @Html.ActionLink(" { Ignite For Her }", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>@Html.ActionLink("Next", "Details/1", "Instruction")</li>
+                    <li>@Html.ActionLink("Next", "Details", "Instruction")</li>
                 </ul>
             </div>
         </div>

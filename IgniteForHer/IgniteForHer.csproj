@@ -186,6 +186,7 @@
   <ItemGroup>
     <Content Include="Content\concert.jpg" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\fire-icon-614x460.png" />
     <Content Include="Content\fire.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
