@@ -1,30 +1,45 @@
 ﻿@model IgniteForHer.Models.Instruction
 
+@{
+    var data = @"function fs (){
+var x = 'y';
+}";
+}
+
+<div id="info" class="col-md-3 frame" style="border:1px; border-color: lightgray; height:600px; border-style: solid; margin: 10px 0px;">
+    <div style="padding:20px 0px">
+        <p>ID: @Model.InstructionId</p>
+        <p>Title: @Model.Title</p>
+        <p>Instructions: @Model.InstructionItem</p>
+        <p>Hint: @Model.Hint</p>
+        <pre>@data</pre>
+    </div>
+</div>
+<div class="col-md-3 frame" style="border:1px; border-color:lightgray; border-style:solid; margin: 10px 0px; ">
+    <textarea id="code" style="border-color: lightgray; height:600px; width:270px; border: 0px; border-style: solid; padding:20px 0px">@Html.Raw(Model.Html)</textarea>
+
+</div>
+
+<div class="col-md-6 frame" style="border:1px;border-color: lightgray; height:600px; border-style: solid; margin: 10px 0px;"></div>
+
+<div class="col-md-12"></div>
+
+
+
+@Html.Raw(Model.Javascript)
+
 <div>
-    <p>ID: @Model.InstructionId</p>
-    <p>Title: @Model.Title</p>
-    <p>Instructions: @Model.InstructionItem</p>
-    <p>Hint: </p> @Html.Raw(Model.Hint)
     @{
         var next = Model.InstructionId + 1;
         var previous = Model.InstructionId - 1;
 
-        if (previous < 1)
-        {
-            previous = 1;
-        }
+        if (previous < 1) { previous = 1; }
 
-        if (next > 2)
-        {
-            next = 2;
-        }
-
-
-        <p> 
+        if (next > 2) { next = 2; }
+        <p>
             <a href="http://localhost:18953/Instruction/Details/@previous" class="btn btn-primary btn-lg">Previous</a>
             <a href="http://localhost:18953/Instruction/Details/@next" class="btn btn-primary btn-lg">Next</a>
         </p>
     }
-
-
 </div>
+
