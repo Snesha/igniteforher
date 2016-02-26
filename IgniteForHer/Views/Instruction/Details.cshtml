@@ -1,22 +1,50 @@
 ﻿@model IgniteForHer.Models.Instruction
 
+@{
+    var hint = @"function myFunction(p1, p2) { 
+return p1 * p2; }";
+}
 <div style="width:100%; height:100%; margin:auto;">
-    <div class="col-md-3" style="height:500px; margin:auto;">
-        <div style="width:100%; height:250px;  margin:auto;  border-right:1px solid gray;">
+    <div class="col-md-3" style="height:550px; margin:auto;">
+        <div style="width:100%; height:300px;  margin:auto;  border-right:1px solid gray;">
             <h1>Instruction</h1>
             <p>Lets celebrate the end of high school. And the start of our new lives!</p>
             <p>First we need to some mUsIc!!!</p>
             <ol>
                 <li>To select a song set variable music to the song of your choice</li>
+                <li>Pump up the jam!!!</li>
             </ol>
+            <input type="submit" value="hint" class="submit btn btn-primary btn-sm">
+            <pre>@hint</pre>
+
 
         </div>
         <div style="width:100%; height:250px; margin:auto; border-top:1px solid gray; border-right:1px solid gray;">
-            <p>Code</p>
+            <h1>Code</h1>
+            <form method="post" action="">
+                <textarea name="TextArea" rows="8" cols="50">This is text area</textarea>
+                <input type="submit" value="run code" class="submit btn btn-primary btn-sm  ">
+            </form>
+            @{
+
+                var Html = @Model.Html;
+
+                if (IsPost)
+                {
+                    string myHtml = @Model.Html;
+                    string textarea = Request["TextArea"];
+                    var total = myHtml + "<script> document.getElementById('result').class = 'visible';</script>";
+                    <p>
+                        @Html.Raw(total) <br>
+                    </p>
+                }
+            }
         </div>
     </div>
-    <div class="col-md-9" style="height:500px; margin:auto;">
-        <p>Result</p>
-        <img src="~/App_Data/concert.jpg" />
+    <div class="col-md-9" style="max-height:500px; margin:auto;">
+        <h1>Result</h1>
+        <div id="result" class="hidden">
+            <img src="~/Content/concert.jpg" width="800" />
+        </div>
     </div>
 </div>

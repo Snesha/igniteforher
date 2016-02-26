@@ -11,11 +11,7 @@ namespace IgniteForHer.Models
         public string Title { get; set; }
         public string InstructionItem { get; set; }
         public string Hint { get; set; }
-
         public string Html { get; set; }
         public string Javascript { get; set; }
-
-        public string testConsole { get; set; }
-
     }
 }
