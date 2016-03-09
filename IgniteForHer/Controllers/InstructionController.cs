@@ -12,13 +12,15 @@ namespace IgniteForHer.Controllers
         public ActionResult Details()
         {
             InstructionContext instructionContext = new InstructionContext();
-            Instruction instruction = instructionContext.Instructions.FirstOrDefault();
+            //Instruction instruction = instructionContext.Instructions.FirstOrDefault();
+            Instruction instruction = new Instruction();
             return View(instruction);
         }
         public ActionResult Details2()
         {
             InstructionContext instructionContext = new InstructionContext();
-            Instruction instruction = instructionContext.Instructions.Single(inst => inst.InstructionId == 2);
+            //Instruction instruction = instructionContext.Instructions.Single(inst => inst.InstructionId == 2);
+            Instruction instruction = new Instruction();
             return View(instruction);
         }
 

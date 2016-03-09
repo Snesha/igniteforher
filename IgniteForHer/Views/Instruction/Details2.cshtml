@@ -6,7 +6,32 @@
     </div>
     <div class="col-md-4" style="height:600px; margin:auto; border: none; background-color:black; color:white;">
             <h1>Code</h1>
-        <textarea name="TextArea" rows="27" cols="46" style="margin-bottom:10px; border: none; background-color:black; color:white;">alert('Hello World)</textarea>
+        <textarea name="TextArea" rows="27" cols="46" style="margin-bottom:10px; border: none; background-color:black; color:white;">
+            function ArrangeItems(area, item) {
+            document.getElementById(area).src = item;
+            }
+
+            function ArrangeDecorations(item) {
+            ArrangeItems("decor1", item);
+            ArrangeItems("decor2", item);
+            ArrangeItems("decor3", item);
+            ArrangeItems("decor4", item);
+            }
+
+            function SetUpBanner(banner, year) {
+            document.getElementById("year").innerText = year;
+            document.getElementById("banner").innerText = banner;
+            }
+
+            ArrangeItems("cake", cake);
+            ArrangeItems("people1", Dancers.top);
+            ArrangeItems("people2", Dancers.middle);
+            ArrangeItems("people3", Dancers.bottom);
+            ArrangeItems("music", music);
+            ArrangeDecorations(decorations);
+            SetUpBanner(banner, year);
+
+        </textarea>
         <form method="post" action="">
             <br />
             <input type="button" class="submit btn btn-primary btn-sm" id="btnpopup" value="Run Code" onclick="ShowModelPopUp();" />
@@ -25,7 +50,7 @@
     </div>
     <div class="col-md-4" style="height:600px; margin:auto; border:none">
         <h1>Result</h1>
-        <img src="~/Content/MyRoom_Final.png" style="border:1px solid white; width:400px" />
+        <img src="~/Content/IFHWithoutDJ.png" style="border:1px solid white; width:400px" />
     </div>
     </div>
 

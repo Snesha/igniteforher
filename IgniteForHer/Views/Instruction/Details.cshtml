@@ -2,17 +2,17 @@
 
 <div style="width:100%; height:100%; margin:auto;">
     <div class="col-md-4" style="height:600px; margin:auto; overflow-y: scroll;">
-            @Html.Partial("Instruction1");
+        @Html.Partial("Instruction1");
     </div>
     <div class="col-md-4" style="height:600px; margin:auto; border: none; background-color:black; color:white;">
-            <h1>Code</h1>
+        <h1>Code</h1>
         <textarea name="TextArea" rows="27" cols="46" style="margin-bottom:10px; border: none; background-color:black; color:white;">alert('Hello World)</textarea>
-            <form method="post" action="">
-                <br />
-                <input type="button" class="submit btn btn-primary btn-sm" id="btnpopup" value="Run Code" onclick="ShowModelPopUp();" />
-                @*<input type="submit" value="run code" class="submit btn btn-primary btn-sm">*@
-            </form>
-            @*@{
+        <form method="post" action="">
+            <br />
+            <input type="button" class="submit btn btn-primary btn-sm" id="btnpopup" value="Run Code" onclick="ShowModelPopUp();" />
+            @*<input type="submit" value="run code" class="submit btn btn-primary btn-sm">*@
+        </form>
+        @*@{
                 if (IsPost)
                 {
                     string textarea = Request["TextArea"];
@@ -26,11 +26,13 @@
     <div class="col-md-4" style="height:600px; margin:auto; border:none">
         <h1>Result</h1>
         @*<div style="width:300px; height:400px">
-            @Html.Partial("Result1");
-        </div>*@
+                @Html.Partial("Result1");
+            </div>*@
         @*<img src="~/Content/MyRoom_Final.png" style="border:1px solid white; width:400px"/>*@
+        <img src="~/Content/MyRoom_Final.png" style="border:1px solid white; width:400px" />
+
     </div>
-    </div>
+</div>
 
 
 <script type="text/javascript">
@@ -38,6 +40,5 @@
         window.showModalDialog('/Instruction/Result1', "WindowPopup", "dialogHeight: 650px; dialogWidth: 800px;" +
                     "dialogTop: 50px;  dialogLeft: 150px; edge: Raised; center: Yes;" +
                     "help: No; resizable: No; status: No;");
-}
+    }
 </script>
-
